@@ -21,9 +21,10 @@ function App() {
       <div className="min-h-screen bg-gradient-to-br from-[#F5F3F0] to-[#E8F5E8]">
         <Navbar onLoginClick={() => setIsLoginOpen(true)} />
         
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Home />} />
+        <div className="pt-24">
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/impact" element={<Impact />} />
@@ -31,6 +32,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresence>
+        </div>
 
         {/* Floating Chat Blob */}
         <ChatBlob onClick={() => setIsChatOpen(true)} />
