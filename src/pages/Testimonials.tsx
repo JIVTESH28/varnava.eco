@@ -47,11 +47,12 @@ const Testimonials: React.FC = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <section className="relative py-32 overflow-hidden pt-32">
+      {/* Adjusted section padding */}
+      <section className="relative overflow-hidden py-24 md:pb-32">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#F5F3F0] via-[#E8F5E8] to-[#F5F3F0]" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-6"> {/* Standardized max-width */}
           {/* Header */}
           <motion.div
             className="text-center mb-20"
@@ -73,14 +74,14 @@ const Testimonials: React.FC = () => {
               <span className="text-[#4A7C59] font-medium text-sm">Testimonials</span>
             </motion.div>
 
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#4A7C59] mb-6">
+            <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#4A7C59] mb-6 leading-snug"> {/* Added leading-snug */}
               What Our{' '}
               <span className="bg-gradient-to-r from-[#4A7C59] to-[#7FB069] bg-clip-text text-transparent">
                 Community Says
               </span>
             </h2>
             
-            <p className="text-xl text-[#6B8E6B] max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md text-[#6B8E6B] max-w-3xl mx-auto leading-relaxed"> {/* Adjusted text size */}
               Join thousands of professionals who have made the switch to sustainable excellence.
             </p>
           </motion.div>

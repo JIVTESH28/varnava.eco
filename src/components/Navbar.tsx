@@ -199,7 +199,7 @@ const Navbar: React.FC<NavbarProps> = ({ onLoginClick }) => {
           // Let's ensure the nav itself is a positioning context or use fixed positioning for the mobile menu too.
           // The <motion.nav> is fixed. `absolute top-full` should work if this mobile menu div is a direct child of motion.nav
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3">
             {navItems.map((item) => (
               <Link
                 key={item.id}

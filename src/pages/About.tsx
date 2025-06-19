@@ -33,7 +33,8 @@ const About: React.FC = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <section className="relative py-32 overflow-hidden pt-32">
+      {/* Adjusted section padding, removed pt-32 as global pt-24 exists */}
+      <section className="relative overflow-hidden py-24 md:py-32">
         {/* Parallax Background */}
         <div 
           className="absolute inset-0"
@@ -47,7 +48,7 @@ const About: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#F5F3F0]/90 to-[#E8F5E8]/90 backdrop-blur-sm" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-6"> {/* Standardized max-width */}
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <motion.div
@@ -69,21 +70,21 @@ const About: React.FC = () => {
                 <span className="text-[#4A7C59] font-medium text-sm">About Varnava</span>
               </motion.div>
 
-              <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#4A7C59] mb-6 leading-tight">
+              <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#4A7C59] mb-6 leading-snug"> {/* Adjusted leading */}
                 Nature-Inspired.{' '}
                 <span className="bg-gradient-to-r from-[#4A7C59] to-[#7FB069] bg-clip-text text-transparent">
                   Future-Focused.
                 </span>
               </h2>
 
-              <p className="text-xl text-[#6B8E6B] mb-8 leading-relaxed">
+              <p className="text-md text-[#6B8E6B] mb-6 leading-relaxed"> {/* Adjusted text size and margin */}
                 At Varnava, sustainability meets sophistication. We curate premium, 
                 eco-conscious products with purpose and pride, creating tools that 
                 inspire conscious living while maintaining the highest standards of 
                 professional excellence.
               </p>
 
-              <p className="text-lg text-[#6B8E6B] mb-12 leading-relaxed">
+              <p className="text-md text-[#6B8E6B] mb-10 leading-relaxed"> {/* Adjusted text size and margin */}
                 Our commitment extends beyond products to encompass a philosophy of 
                 responsible innovation, where every item tells a story of environmental 
                 stewardship and timeless design.

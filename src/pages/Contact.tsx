@@ -10,7 +10,8 @@ const Contact: React.FC = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <section className="relative py-32 overflow-hidden pt-32">
+      {/* Adjusted section padding */}
+      <section className="relative overflow-hidden py-24 md:pb-32">
         {/* Parallax Background */}
         <div 
           className="absolute inset-0"
@@ -46,7 +47,7 @@ const Contact: React.FC = () => {
             </motion.div>
 
             {/* Headline */}
-            <h2 className="text-5xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight">
+            <h2 className="text-5xl md:text-6xl font-serif font-bold text-white mb-8 leading-snug"> {/* Adjusted size & leading */}
               Ready to Make a{' '}
               <span className="bg-gradient-to-r from-white to-[#A8D5A8] bg-clip-text text-transparent">
                 Difference?
@@ -54,7 +55,7 @@ const Contact: React.FC = () => {
             </h2>
 
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-white/80 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-md text-white/80 mb-12 leading-relaxed max-w-3xl mx-auto"> {/* Adjusted size */}
               Join thousands of conscious professionals who choose sustainability 
               without compromising on quality. Your journey to eco-excellence starts here.
             </p>
