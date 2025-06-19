@@ -11,6 +11,7 @@ import Products from './pages/Products';
 import Impact from './pages/Impact';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
+import Footer from './components/Footer'; // Add this
 
 function App() {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -18,10 +19,10 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-[#F5F3F0] to-[#E8F5E8]">
+      <div className="min-h-screen bg-gradient-to-br from-[#F5F3F0] to-[#E8F5E8] flex flex-col">
         <Navbar onLoginClick={() => setIsLoginOpen(true)} />
         
-        <div className="pt-24">
+        <main className="pt-24 flex-grow"> {/* Changed div to main and added flex-grow */}
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -48,6 +49,8 @@ function App() {
           isOpen={isLoginOpen} 
           onClose={() => setIsLoginOpen(false)} 
         />
+
+        <Footer /> {/* Add this */}
       </div>
     </Router>
   );

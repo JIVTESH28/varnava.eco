@@ -37,7 +37,8 @@ const Impact: React.FC = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <section className="relative py-32 overflow-hidden pt-32">
+      {/* Adjusted section padding */}
+      <section className="relative overflow-hidden py-24 md:pb-32">
         {/* Parallax Background */}
         <div 
           className="absolute inset-0"
@@ -51,7 +52,7 @@ const Impact: React.FC = () => {
           <div className="absolute inset-0 bg-[#4A7C59]/80 backdrop-blur-sm" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-6"> {/* Standardized max-width */}
           {/* Header */}
           <motion.div
             className="text-center mb-20"
@@ -73,14 +74,14 @@ const Impact: React.FC = () => {
               <span className="text-white font-medium text-sm">Our Impact</span>
             </motion.div>
 
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-white mb-6">
+            <h2 className="text-5xl md:text-6xl font-serif font-bold text-white mb-6 leading-snug"> {/* Added leading-snug */}
               Making a{' '}
               <span className="bg-gradient-to-r from-white to-[#A8D5A8] bg-clip-text text-transparent">
                 Difference
               </span>
             </h2>
             
-            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md text-white/80 max-w-3xl mx-auto leading-relaxed"> {/* Adjusted text size */}
               Every product you choose creates a ripple effect of positive change. 
               Here's how we're transforming the world together.
             </p>

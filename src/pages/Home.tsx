@@ -10,7 +10,8 @@ const Home: React.FC = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Parallax Background */}
         <div 
           className="absolute inset-0"
@@ -82,7 +83,7 @@ const Home: React.FC = () => {
 
             {/* Main Headline */}
             <motion.h1
-              className="text-6xl md:text-8xl font-serif font-bold text-[#4A7C59] mb-6 leading-tight"
+              className="text-5xl md:text-6xl font-serif font-bold text-[#4A7C59] mb-6 leading-snug"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
@@ -173,6 +174,124 @@ const Home: React.FC = () => {
               />
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Our Key Offerings Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.h2
+            className="text-3xl md:text-4xl font-serif font-bold text-center text-[#4A7C59] mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Our Key Offerings
+          </motion.h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {/* Offering 1 */}
+            <motion.div
+              className="p-8 bg-[#F5F3F0] rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Leaf size={40} className="mx-auto mb-6 text-[#7FB069]" />
+              <h3 className="text-xl font-semibold text-[#4A7C59] mb-4 text-center">Sustainable Notebooks</h3>
+              <p className="text-[#6B8E6B] text-sm leading-relaxed text-center">
+                Beautifully crafted notebooks from recycled and sustainable materials, perfect for the eco-conscious professional.
+              </p>
+            </motion.div>
+            {/* Offering 2 */}
+            <motion.div
+              className="p-8 bg-[#F5F3F0] rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Sparkles size={40} className="mx-auto mb-6 text-[#7FB069]" /> {/* Using Sparkles as another example icon */}
+              <h3 className="text-xl font-semibold text-[#4A7C59] mb-4 text-center">Eco-Friendly Stationery</h3>
+              <p className="text-[#6B8E6B] text-sm leading-relaxed text-center">
+                A range of stationery that combines design, functionality, and commitment to the environment.
+              </p>
+            </motion.div>
+            {/* Offering 3 */}
+            <motion.div
+              className="p-8 bg-[#F5F3F0] rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              {/* Placeholder for a different icon - could use another from Lucide or custom */}
+              <div className="w-10 h-10 mx-auto mb-6 text-[#7FB069] flex items-center justify-center">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <h3 className="text-xl font-semibold text-[#4A7C59] mb-4 text-center">Custom Display Products</h3>
+              <p className="text-[#6B8E6B] text-sm leading-relaxed text-center">
+                Bespoke display solutions designed with sustainability and your brand's uniqueness in mind.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us? Section */}
+      <section className="py-16 md:py-24 bg-[#E8F5E8]">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.h2
+            className="text-3xl md:text-4xl font-serif font-bold text-center text-[#4A7C59] mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Why Choose Varnava?
+          </motion.h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {/* Benefit 1 */}
+            <motion.div
+              className="p-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-semibold text-[#4A7C59] mb-4 text-center">Commitment to Sustainability</h3>
+              <p className="text-[#6B8E6B] text-md leading-relaxed text-center">
+                We are dedicated to providing high-quality products that are kind to the planet, helping your business meet its green objectives.
+              </p>
+            </motion.div>
+            {/* Benefit 2 */}
+            <motion.div
+              className="p-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-semibold text-[#4A7C59] mb-4 text-center">Elegant & Professional Design</h3>
+              <p className="text-[#6B8E6B] text-md leading-relaxed text-center">
+                Our products are designed to impress, adding a touch of sophistication to your brand's image and workspace.
+              </p>
+            </motion.div>
+            {/* Benefit 3 */}
+            <motion.div
+              className="p-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-semibold text-[#4A7C59] mb-4 text-center">Bespoke B2B Solutions</h3>
+              <p className="text-[#6B8E6B] text-md leading-relaxed text-center">
+                We partner with businesses to provide tailored solutions that align with your brand values and operational needs.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
     </motion.div>
